@@ -348,13 +348,28 @@ p {
 
 /* ---------------------------------------PORTFOLIO-MAIN----------------------------------------- */
 
-.portfolio-item {
+.card-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-item {
+  margin-bottom: 30px;
+
   background: var(--color-simple);
   border: 1px solid #eeeeee;
   box-sizing: border-box;
 }
 
-.item-title {
+.card-item .img {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  padding-bottom: 4px;
+  padding-left: 24px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -362,7 +377,10 @@ p {
   color: var(--color-title);
 }
 
-.item-text {
+.card-text {
+  padding-bottom: 20px;
+  padding-left: 24px;
+
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
