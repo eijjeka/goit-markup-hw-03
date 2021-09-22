@@ -21,12 +21,15 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
   padding: 0;
 }
 
 .list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 .btn {
@@ -49,20 +52,26 @@ h6 {
   margin: 0 auto;
 }
 
+.m-bottom {
+  margin-bottom: 94px;
+}
+
+.img {
+  display: block;
+}
+
 /* ----------------------------------------------HEADER----------------------------------------- */
 .header {
   border: 1px solid #ececec;
 }
 
-.header-flex {
+.header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .header-logo {
   color: var(--logo-color);
-  margin-right: 93px;
 }
 
 .logo {
@@ -83,14 +92,18 @@ h6 {
 
 .nav-list {
   display: flex;
+  margin-left: 93px;
   padding-left: 0;
 }
 
-.nav-list .item:not(:last-child) {
-  margin-right: 50px;
+.nav-list .item + .item {
+  margin-left: 50px;
 }
 
 .nav-link {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -114,29 +127,36 @@ h6 {
 
 .contact-list {
   display: flex;
-  padding-left: 0;
+  margin-left: auto;
 }
 
 .contact-link {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
   color: var(--color-text);
 }
-.contact-list .item:not(:last-child) {
-  margin-right: 50px;
+.contact-list .item + .item {
+  margin-left: 50px;
 }
 
 /* ----------------------------------------------HERO----------------------------------------- */
 
 .hero {
   background-color: var(--bg-color);
+  text-align: center;
+  margin-bottom: 94px;
 }
 
 .hero-title {
   max-width: 696px;
   padding-top: 200px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 30px;
 
   font-weight: 900;
@@ -166,8 +186,19 @@ h6 {
 }
 
 /* ----------------------------------------------ADVANTAGE----------------------------------------- */
+.advantage-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 94px;
+}
+
+.advantage-list .item {
+  width: 270px;
+}
 
 .advantage-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -184,17 +215,43 @@ h6 {
 }
 
 /* ----------------------------------------------WORK----------------------------------------- */
-
+.work {
+  margin-bottom: 94px;
+}
+.work-title {
+  margin-bottom: 50px;
+}
+.work-list {
+  display: flex;
+  justify-content: space-between;
+}
 /* ----------------------------------------------TEAM----------------------------------------- */
 .team {
   background-color: var(--team-bg);
+}
+
+.team .title {
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 94px;
 }
 
 .person-item {
   background-color: var(--color-simple);
 }
 
+.person-item .img {
+  margin-bottom: 30px;
+}
+
 .person-title {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -204,6 +261,8 @@ h6 {
 }
 
 .person-text {
+  margin-bottom: 30px;
+
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -217,7 +276,19 @@ h6 {
 }
 
 .footer-logo {
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 20px;
+
   color: var(--color-simple);
+}
+
+.address-list .item + .item {
+  margin-top: 9px;
+}
+
+.address-list {
+  padding-bottom: 60px;
 }
 
 .map-link {
@@ -240,6 +311,17 @@ h6 {
 
 /* -----------------/////////////////////PORTFOLIO///////////////////--------------------- */
 
+/* ----------------------------------PORTFOLIO-HEADER----------------------------------------- */
+
+.list-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.list-btn .btn-item + .btn-item {
+  margin-left: 8px;
+}
+
 .btn-filter:hover,
 .btn-filter:focus,
 .active {
@@ -248,6 +330,8 @@ h6 {
 }
 
 .btn-filter {
+  padding: 6px 22px;
+
   cursor: pointer;
   border: none;
   font-family: Roboto;
