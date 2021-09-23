@@ -291,7 +291,7 @@ ul {
 }
 
 .address-list {
-  padding-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .map-link {
@@ -355,6 +355,7 @@ ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  outline: 1px solid red;
 }
 
 .card-item {
@@ -363,6 +364,9 @@ ul {
   background: var(--color-simple);
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+}
+.card-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 
 .card-item .img {
