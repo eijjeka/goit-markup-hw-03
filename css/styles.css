@@ -38,6 +38,7 @@ ul {
   border: none;
   color: var(--main-color-title);
 }
+
 .title {
   font-weight: 700;
   font-size: 36px;
@@ -194,14 +195,14 @@ ul {
 /* ----------------------------------------------ADVANTAGE----------------------------------------- */
 .advantage-list {
   display: flex;
+  margin-right: -30px;
 }
 
-.advantage-list .item {
-  max-width: 270px;
-}
-
-.advantage-list .item:not(:last-child) {
-  margin-right: 30px;
+.advantage-item {
+  flex-basis: calc(100% / 4 - 30px);
+  /* margin: 15px; */
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .advantage-title {
@@ -210,7 +211,6 @@ ul {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -265,20 +265,24 @@ ul {
   margin-bottom: 30px;
 }
 
+.person-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .person-title {
   margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  text-align: center;
   letter-spacing: 0.03em;
 }
 
 .person-text {
   font-size: 16px;
   line-height: 1.18;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-color-text);
 }
@@ -359,26 +363,29 @@ ul {
 .card-list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: -30px;
+  margin-right: -30px;
 }
 
 .card-item {
-  width: calc((100% - 60px) / 3);
+  flex-basis: calc(100% / 3 - 30px);
   margin-right: 30px;
   margin-bottom: 30px;
-
-  border: 1px solid #eeeeee;
 }
 
-.card-item:nth-child(3n) {
+/* .card-item:nth-child(3n) {
   margin-right: 0;
-}
+} */
 
-.card-item:nth-last-child(-n + 3) {
+/* .card-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
-}
+} */
 
 .card-block {
-  margin: 20px 24px;
+  padding: 20px 24px;
+
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .card-title {
